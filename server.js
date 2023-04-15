@@ -11,7 +11,7 @@ app.use(express.json());
 
 const dirname = path.dirname(new URL(import.meta.url).pathname);
 
-app.use(express.static(path.join(dirname, "frontend", "build")));
+app.use(express.static(path.join(dirname, "build")));
 
 app.get("*", function (_, res) {
   res.sendFile(
