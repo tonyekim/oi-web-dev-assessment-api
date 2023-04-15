@@ -15,7 +15,7 @@ app.use(express.static(path.join(dirname, "frontend", "build")));
 
 app.get("*", function (_, res) {
   res.sendFile(
-    path.join(dirname, "frontend", "build", "index.html"),
+    path.join(dirname, "build", "index.html"),
     function (err) {
       if (err) {
         res.status(500).send(err);
