@@ -39,7 +39,7 @@ app.post("/signup", (req, res) => {
   db.query(sql, [values], (err, data) => {
     if (err) {
       console.info(err)
-      return res.json("Error");
+      return res.json(err);
 
       
     }
@@ -83,7 +83,7 @@ app.post("/admin-login", (req, res) => {
 app.get("/", (req, res) => {
   const sql = "SELECT * FROM user";
   db.query(sql, (err, data) => {
-    if (err) return res.json("Error");
+    if (err) return res.json(err);
     return res.json(data);
   });
 });
@@ -94,7 +94,7 @@ app.post("/create", (req, res) => {
 
   const values = [req.body.name, req.body.content, req.body.category];
   db.query(sql, values, (err, data) => {
-    if (err) return res.json("Error");
+    if (err) return res.json(err);
     return res.json(data);
   });
 });
