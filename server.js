@@ -27,9 +27,9 @@ app.get("*", function (_, res) {
 
 const db = mysql.createConnection({
   host: "localhost",
-  user: "root",
-  password: "",
-  database: "signup",
+  user: "id20613361_root",
+  password: "_RTi!cY=gEt3=AW<",
+  database: "id20613361_signup",
 });
 
 // SIGN UP ROUTE
